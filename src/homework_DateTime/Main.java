@@ -100,8 +100,7 @@ public class Main {
         Collections.sort(localDates);
         System.out.println(localDates);
         //[2020-02-20, 2021-12-20, 2022-03-27, 2023-03-17, 2023-03-27]
-        System.out.println(localDates.size());
-        //5
+
 
     }
 }
