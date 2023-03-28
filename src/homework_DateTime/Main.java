@@ -57,7 +57,7 @@ public class Main {
 
         //   Создать дату на неделю позже сегодняшней
         System.out.println("today is " + LocalDate.now());
-        System.out.println("and in one week is: " + LocalDate.now().plus(1,ChronoUnit.WEEKS));
+        System.out.println("and in one week is: " + LocalDate.now().plusWeeks(1));
         // today is 2023-03-27
         // and in one week is: 2023-04-03
 
@@ -67,7 +67,7 @@ public class Main {
         //2023-03-27 is actuale date and 2022-03-27 is date from last year
 
         //Создать дату на год позже сегодняшней используя plus метод
-        System.out.println("In one year we have " + LocalDate.now().plusYears(1));
+        System.out.println("In one year we have " + LocalDate.now().plus(1,ChronoUnit.YEARS));
         //In one year we have 2024-03-27
 
         //Создать даты tomorrow и yesterday и проверить находятся ли они до или после сегодняшней
