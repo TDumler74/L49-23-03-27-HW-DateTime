@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+
 /*
 Получить и вывести на экран:
 -текущую дату
@@ -47,60 +48,69 @@ public class Main {
         }
 
         //Получить и вывести на экран текущее время
-        System.out.println("The actual time is: "+LocalTime.now());
+        System.out.println("The actual time is: " + LocalTime.now());
         //The actual time is: 16:10:25.185148500
 
         //  текущее время + 3 часа
-        System.out.println("In three hours is : "+LocalTime.now().plusHours(3));
+        System.out.println("In three hours is : " + LocalTime.now().plusHours(3));
         //In three hours is : 19:10:25.185148500
 
         //   Создать дату на неделю позже сегодняшней
         System.out.println("today is " + LocalDate.now());
-        System.out.println("and in one week is: " + LocalDate.now().plusWeeks(1));
+        System.out.println("and in one week is: " + LocalDate.now().plus(1,ChronoUnit.WEEKS));
         // today is 2023-03-27
         // and in one week is: 2023-04-03
 
         //Создать дату, которая была на год раньше сегодняшней используя метод minus
         LocalDate localDate = LocalDate.now();
-        System.out.println(localDate + " is actuale date " + "and " + LocalDate.now().minusYears(1) + " is date from last year ");//
+        System.out.println(localDate + " is actuale date " + "and " + LocalDate.now().minus(1,ChronoUnit.YEARS) + " is date from last year ");//
         //2023-03-27 is actuale date and 2022-03-27 is date from last year
 
         //Создать дату на год позже сегодняшней используя plus метод
-        System.out.println("In one year we have "+LocalDate.now().plusYears(1));
+        System.out.println("In one year we have " + LocalDate.now().plusYears(1));
         //In one year we have 2024-03-27
 
         //Создать даты tomorrow и yesterday и проверить находятся ли они до или после сегодняшней
 
-        LocalDate tomorrow = LocalDate.parse("2023-03-27").plus(1,ChronoUnit.DAYS);
-        LocalDate yesterday = LocalDate.of(2023,03,27).minusDays(1);
+        LocalDate tomorrow = LocalDate.parse("2023-03-27").plus(1, ChronoUnit.DAYS);
+        LocalDate yesterday = LocalDate.of(2023, 03, 27).minusDays(1);
 
-       System.out.println("tomorrow is "+tomorrow+", yesterday was "+yesterday);
-       //tomorrow is 2023-03-28, yesterday was 2023-03-26
+        System.out.println("tomorrow is " + tomorrow + ", yesterday was " + yesterday);
+        //tomorrow is 2023-03-28, yesterday was 2023-03-26
 
-        if(tomorrow.isAfter(localDate)&& yesterday.isBefore(localDate)){
+        if (tomorrow.isAfter(localDate) && yesterday.isBefore(localDate)) {
             System.out.println(true);
         } else {
             System.out.println(false);
         }
-              // true
-
-
+        // true
 
 
         //*Написать метод, принимающий лист из нескольких дат типа LocalDate и возвращающий количество
         // дней между самой ранней и поздней датами
-        List<LocalDate> localDates=new ArrayList<>();
+        List<LocalDate> localDates = new ArrayList<>();
         localDates.add(LocalDate.now());
         localDates.add(LocalDate.now().minusYears(1));
         localDates.add(LocalDate.now().minusDays(10));
         localDates.add(LocalDate.parse("2020-02-20"));
-        localDates.add(LocalDate.of(2021,12,20));
+        localDates.add(LocalDate.of(2021, 12, 20));
+
         System.out.println(localDates);
         //[2023-03-27, 2022-03-27, 2023-03-17, 2020-02-20, 2022-12-20]
+
         Collections.sort(localDates);
         System.out.println(localDates);
+
+
+
+
+
         //[2020-02-20, 2021-12-20, 2022-03-27, 2023-03-17, 2023-03-27]
 
 
     }
+
+
+
+
 }
