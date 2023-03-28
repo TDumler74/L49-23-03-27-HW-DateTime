@@ -106,21 +106,17 @@ public class Main {
         System.out.println(localDates);
         //[2020-02-20, 2021-12-20, 2022-03-27, 2023-03-17, 2023-03-27]
 
-        LocalDate countDays = null;
-        for (int i = 0; i < localDates.size(); i++) {
 
 
-        }System.out.println(countDays);
-
-
-
-
-
-
+        System.out.println(daysInBetween(localDates));
 
     }
 
+    public static long daysInBetween(List<LocalDate>dates){
+        Collections.sort(dates);
 
+        return ChronoUnit.DAYS.between(dates.get(0),dates.get(dates.size()-1));
+    }
 
 
 }
