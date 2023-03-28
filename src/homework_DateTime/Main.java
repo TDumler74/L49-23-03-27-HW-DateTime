@@ -28,6 +28,7 @@ public class Main {
         //  Получить и вывести на экран:
         // -текущую дату
         System.out.println("Local date from 27.03.2023 is : " + LocalDate.now());//Local date from 27.03.2023 is : 2023-03-27
+
         // Получить и вывести на экран:
         // -текущий год, месяц и день
         System.out.println("Local time is " + LocalTime.now());//Local time is 15:50:02.045131500
@@ -36,8 +37,8 @@ public class Main {
         LocalDate birthDay = LocalDate.of(1974, 10, 01);
         System.out.println("My birthday is on " + birthDay);//My birthday is on 1974-10-01
 
-        //   Создать две даты и проверить на равенство
 
+        //   Создать две даты и проверить на равенство
         LocalDate date = LocalDate.parse("2023-03-28");
         LocalDate date1 = LocalDate.of(2023, 03, 27);
 
@@ -47,13 +48,16 @@ public class Main {
             System.out.println(false);
         }
 
+
         //Получить и вывести на экран текущее время
         System.out.println("The actual time is: " + LocalTime.now());
         //The actual time is: 16:10:25.185148500
 
+
         //  текущее время + 3 часа
         System.out.println("In three hours is : " + LocalTime.now().plusHours(3));
         //In three hours is : 19:10:25.185148500
+
 
         //   Создать дату на неделю позже сегодняшней
         System.out.println("today is " + LocalDate.now());
@@ -70,8 +74,8 @@ public class Main {
         System.out.println("In one year we have " + LocalDate.now().plus(1,ChronoUnit.YEARS));
         //In one year we have 2024-03-27
 
-        //Создать даты tomorrow и yesterday и проверить находятся ли они до или после сегодняшней
 
+        //Создать даты tomorrow и yesterday и проверить находятся ли они до или после сегодняшней
         LocalDate tomorrow = LocalDate.parse("2023-03-27").plus(1, ChronoUnit.DAYS);
         LocalDate yesterday = LocalDate.of(2023, 03, 27).minusDays(1);
 
