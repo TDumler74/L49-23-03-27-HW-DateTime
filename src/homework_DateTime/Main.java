@@ -100,7 +100,11 @@ public class Main {
 
         Collections.sort(localDates);
         System.out.println(localDates);
+        LocalDate countDays = null;
+        for (int i = 0; i < localDates.size(); i++) {
 
+
+        }System.out.println(countDays);
 
 
 
