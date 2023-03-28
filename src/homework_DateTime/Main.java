@@ -100,6 +100,8 @@ public class Main {
 
         Collections.sort(localDates);
         System.out.println(localDates);
+        //[2020-02-20, 2021-12-20, 2022-03-27, 2023-03-17, 2023-03-27]
+
         LocalDate countDays = null;
         for (int i = 0; i < localDates.size(); i++) {
 
@@ -109,7 +111,7 @@ public class Main {
 
 
 
-        //[2020-02-20, 2021-12-20, 2022-03-27, 2023-03-17, 2023-03-27]
+
 
 
     }
